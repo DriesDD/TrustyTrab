@@ -13,14 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('menu');
-});
+Route::get('/',      'App\Http\Controllers\HomeController@show');
+Route::get('reviews','App\Http\Controllers\ReviewsController@show');
 Route::get('isthisthetrustytrab', function () {      
 return "No, this is Patrick!";  
-});
-Route::get('reviews', function () {
-    return view('reviews');
 });
 Route::get('index', function () {  
     return redirect('/');  
